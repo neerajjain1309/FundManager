@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="FundManager.Module.Summary.View.SummaryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FundManager.Module.Summary.View"
+             xmlns:converters="clr-namespace:FundManager.Infrastructure.Converters;assembly=FundManager.Infrastructure"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+
+    <UserControl.Resources>
+
+        <LinearGradientBrush x:Key="BackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="Snow" Offset="0"/>
+            <GradientStop Color="Gainsboro" Offset="1"/>
+        </LinearGradientBrush>
+
+        <converters:BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <converters:InvertedBooleanToVisibilityConverter x:Key="InvertedBoolToVisibilityConverter" />
+        <converters:PercentConverter x:Key="PercentConverter" />
+        <converters:CurrencyConverter x:Key="CurrencyConverter" />
+
+    </UserControl.Resources>
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Margin="2,2" BorderThickness="1,1" CornerRadius="3,3,0,0" BorderBrush="Black">
+            <Border.Background>
+                <Binding Source="{StaticResource BackgroundBrush}"/>
+            </Border.Background>
+            <TextBlock Margin="5,2" Text="Summary" HorizontalAlignment="Left" FontWeight="Bold" FontSize="12" Height="23"/>
+        </Border>
+
+        <Border DockPanel.Dock="Bottom" Margin="2,2" BorderThickness="1,1" CornerRadius="3,3,0,0" BorderBrush="Black">
+            <Border.Background>
+                <Binding Source="{StaticResource BackgroundBrush}"/>
+            </Border.Background>
+
+            <ItemsControl ItemsSource="{Binding InstrumentSummarySource}" x:Name="SummaryItemControl">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5,5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button Margin="2,2" Content="+" FontSize="10" Width="15" FontWeight="Bold" ToolTip="Show Summary"
+                                    Command="{Binding ShowInstrumentCommand}" HorizontalAlignment="Left"
+                                    Visibility="{Binding  Converter={StaticResource InvertedBoolToVisibilityConverter}, Path = ShowInstrument}"/>
+                            <Button Margin="2,2" Content="-" FontSize="10" Width="15" FontWeight="Bold" ToolTip="Hide Summary"
+                                    Command="{Binding ShowInstrumentCommand}" HorizontalAlignment="Left"
+                                    Visibility="{Binding Converter={StaticResource BoolToVisibilityConverter}, Path = ShowInstrument}"/>
+                            <TextBlock Text="{Binding Instrument.InstrumentType, Mode=OneWay}" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3,2,3,2"/>
+
+                            <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="2,5" Visibility="{Binding Converter={StaticResource BoolToVisibilityConverter}, Path = ShowInstrument}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+
+                                <TextBlock Text="Total Number :" HorizontalAlignment="Left" Margin="0,2"/>
+                                <TextBlock Text="{Binding Instrument.TotalNumber, Mode=OneWay}" HorizontalAlignment="Stretch" Grid.Column="1" Margin="2,2" FontWeight="Bold"/>
+
+                                <TextBlock Text="Total Stock Weight :" HorizontalAlignment="Left" Grid.Row="1" Margin="0,2"/>
+                                <TextBlock Text="{Binding Instrument.TotalWeight, Mode=OneWay, Converter={StaticResource PercentConverter}}" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" Margin="2,2" FontWeight="Bold"/>
+
+                                <TextBlock Text="Total Market Value :" HorizontalAlignment="Left" Grid.Row="2" Margin="0,2"/>
+                                <TextBlock Text="{Binding Instrument.TotalMarketValue, Mode=OneWay, Converter={StaticResource CurrencyConverter}}" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="1" Margin="2,2" FontWeight="Bold"/>
+                            </Grid>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Border>
+
+    </DockPanel>
+
+</UserControl>

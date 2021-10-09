@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.App", "FundManager.App\FundManager.App.csproj", "{EF9AD5B3-25C1-458A-94D8-F51ABB446312}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.Module.AddInstrument", "FundManager.Modules.AddInstrument\FundManager.Module.AddInstrument.csproj", "{E139BD07-603F-4076-A9A7-DB419A036C50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.Module.Summary", "FundManager.Modules.Summary\FundManager.Module.Summary.csproj", "{418CAE29-E319-4B22-ACC2-C795E9B0CAEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.Module.Fund", "FundManager.Modules.Fund\FundManager.Module.Fund.csproj", "{A3C34A37-46C8-412A-A2B8-D2CBB93E45DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.Infrastructure", "FundManager.Infrastructure\FundManager.Infrastructure.csproj", "{142967FB-AF27-4A2E-B632-587C89DCCD23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.Domain", "FundManager.Domain\FundManager.Domain.csproj", "{157D93D6-00ED-48CF-BB09-43CEF39433CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{8D7B56E2-7477-439C-980B-C0E051D91B66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.Domain.Tests", "FundManager.Domain.Tests\FundManager.Domain.Tests.csproj", "{8CE18C00-4C18-47C6-8663-4FECB4426F72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.Infrastructure.Tests", "FundManager.Infrastructure.Tests\FundManager.Infrastructure.Tests.csproj", "{8BE5B7F7-C4AD-48EA-A750-73279D36ACE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.Module.AddInstrument.Tests", "FundManager.Module.AddInstrument.Tests\FundManager.Module.AddInstrument.Tests.csproj", "{6992FC93-80BB-47C4-8CF8-6A506B65E301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundManager.Module.Fund.Tests", "FundManager.Module.Fund.Tests\FundManager.Module.Fund.Tests.csproj", "{E4102C8B-AA58-4FCC-950E-976CF85DA694}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF9AD5B3-25C1-458A-94D8-F51ABB446312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9AD5B3-25C1-458A-94D8-F51ABB446312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF9AD5B3-25C1-458A-94D8-F51ABB446312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF9AD5B3-25C1-458A-94D8-F51ABB446312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E139BD07-603F-4076-A9A7-DB419A036C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E139BD07-603F-4076-A9A7-DB419A036C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E139BD07-603F-4076-A9A7-DB419A036C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E139BD07-603F-4076-A9A7-DB419A036C50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{418CAE29-E319-4B22-ACC2-C795E9B0CAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418CAE29-E319-4B22-ACC2-C795E9B0CAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418CAE29-E319-4B22-ACC2-C795E9B0CAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418CAE29-E319-4B22-ACC2-C795E9B0CAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3C34A37-46C8-412A-A2B8-D2CBB93E45DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3C34A37-46C8-412A-A2B8-D2CBB93E45DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3C34A37-46C8-412A-A2B8-D2CBB93E45DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3C34A37-46C8-412A-A2B8-D2CBB93E45DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142967FB-AF27-4A2E-B632-587C89DCCD23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142967FB-AF27-4A2E-B632-587C89DCCD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142967FB-AF27-4A2E-B632-587C89DCCD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142967FB-AF27-4A2E-B632-587C89DCCD23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157D93D6-00ED-48CF-BB09-43CEF39433CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157D93D6-00ED-48CF-BB09-43CEF39433CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157D93D6-00ED-48CF-BB09-43CEF39433CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157D93D6-00ED-48CF-BB09-43CEF39433CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CE18C00-4C18-47C6-8663-4FECB4426F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CE18C00-4C18-47C6-8663-4FECB4426F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CE18C00-4C18-47C6-8663-4FECB4426F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CE18C00-4C18-47C6-8663-4FECB4426F72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE5B7F7-C4AD-48EA-A750-73279D36ACE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE5B7F7-C4AD-48EA-A750-73279D36ACE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE5B7F7-C4AD-48EA-A750-73279D36ACE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE5B7F7-C4AD-48EA-A750-73279D36ACE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6992FC93-80BB-47C4-8CF8-6A506B65E301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6992FC93-80BB-47C4-8CF8-6A506B65E301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6992FC93-80BB-47C4-8CF8-6A506B65E301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6992FC93-80BB-47C4-8CF8-6A506B65E301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4102C8B-AA58-4FCC-950E-976CF85DA694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4102C8B-AA58-4FCC-950E-976CF85DA694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4102C8B-AA58-4FCC-950E-976CF85DA694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4102C8B-AA58-4FCC-950E-976CF85DA694}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8CE18C00-4C18-47C6-8663-4FECB4426F72} = {8D7B56E2-7477-439C-980B-C0E051D91B66}
+		{8BE5B7F7-C4AD-48EA-A750-73279D36ACE6} = {8D7B56E2-7477-439C-980B-C0E051D91B66}
+		{6992FC93-80BB-47C4-8CF8-6A506B65E301} = {8D7B56E2-7477-439C-980B-C0E051D91B66}
+		{E4102C8B-AA58-4FCC-950E-976CF85DA694} = {8D7B56E2-7477-439C-980B-C0E051D91B66}
+	EndGlobalSection
+EndGlobal
